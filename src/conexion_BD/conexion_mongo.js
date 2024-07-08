@@ -1,6 +1,6 @@
 
 import mongoose from 'mongoose';
-import { MONGODB_URL } from '../config.js';
+import { MONGODB_URL } from '../../config.js';
 
 if (!MONGODB_URL) {
     throw new Error("URL de conección no se encontró");

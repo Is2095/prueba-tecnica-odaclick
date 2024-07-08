@@ -7,6 +7,8 @@ import bodyParser from "body-parser";
 import router_todo from '../routes/routers_todo.js';
 import router_usuario from '../routes/routers_usuario.js';
 
+import { ValidacionPermisoTareas, ValidacionPermisosUsuario } from '../middleware/validacionesPermisos.js';
+
 const app = express()
 
 app.use(bodyParser.urlencoded({extended: false}));
@@ -32,7 +34,7 @@ app.use((_req, res, next) => {
     next();
 });
 
-app.use('/api', router_todo);
-app.use('/usuario', router_usuario);
+app.use('/api', ValidacionPermisoTareas, router_todo);
+app.use('/usuario', ValidacionPermisosUsuario, router_usuario);
 
 export default app;
