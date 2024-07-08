@@ -1,5 +1,5 @@
 
-import CrearTareaBD from "../controladores/crearTarea_mongo.js";
+import CrearTareaBD from "../controladores/conMongo/crearTarea_mongo.js";
 
 const CrearTarea = async (req, res) => {
 

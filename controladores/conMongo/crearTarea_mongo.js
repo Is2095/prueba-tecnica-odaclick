@@ -1,5 +1,5 @@
 
-import TareaModelo from '../ModelosBD/modeloMongo.js'
+import TareaModelo from '../../ModelosBD/modeloMongo.js';
 
 const CrearTareaBD = async (datosTarea) => {
 
