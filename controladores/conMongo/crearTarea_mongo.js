@@ -12,7 +12,7 @@ const CrearTareaBD = async (datosTarea) => {
         } else {
             const tareaCreadaBD = new TareaModelo(datosTarea);
             const tareaGuardaBD = await tareaCreadaBD.save();
-            return { error: false, ...tareaGuardaBD }
+            return  tareaGuardaBD 
         };
 };
 

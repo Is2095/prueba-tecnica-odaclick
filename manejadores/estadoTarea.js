@@ -10,7 +10,7 @@ const EstadoTarea = async (req, res) => {
         res.status(404).json({ error: true, message: 'error al obtener la identificación' })
     } else {
         const cambioEstadoTarea = await EstadoTareaBD(id)
-        res.status(200).json(cambioEstadoTarea)
+        res.status(200).json({data: cambioEstadoTarea})
     }
     } catch (error) {
        res.status(500).json({message: 'error de conección'})
