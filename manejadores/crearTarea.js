@@ -13,7 +13,7 @@ try {
     if(tareaCreadaBD.error) {
         res.status(404).json({message: tareaCreadaBD.message});
     } else {
-        res.status(200).json(tareaCreadaBD._doc);
+        res.status(201).json(tareaCreadaBD._doc);
     };
     
 } catch (error) {

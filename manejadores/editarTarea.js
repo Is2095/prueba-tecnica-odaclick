@@ -15,7 +15,7 @@ const EditarTarea = async (req, res) => {
             res.status(404).json('no hay datos para actualizar')
         } else {
             const tareaActualizada = await EditarTareaBD(datosAActualizar)
-            res.status(201).json(tareaActualizada)
+            res.status(200).json(tareaActualizada)
         }
     } catch (error) {
         res.status(500).send('se produjo un error de conección')
