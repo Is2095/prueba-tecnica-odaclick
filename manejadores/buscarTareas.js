@@ -7,7 +7,7 @@ const BuscarTareas = async (req, res) => {
         if(tareas.error) {
             res.status(200).json({error: tareas.error, message: tareas.message})
         }else {
-            res.status(200).json({ data: tareas.data})
+            res.status(200).json(tareas)
         }
     } catch (error) {
         res.status(500).json({error: true, message: 'error en conección'})

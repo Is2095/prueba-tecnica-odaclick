@@ -13,6 +13,9 @@ const tareaSchema = new Schema({
     estado: {
         type: Boolean,
         default: false
+    },
+    idUsuario: {
+        type: String
     }
 });
 

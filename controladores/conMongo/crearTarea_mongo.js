@@ -3,7 +3,7 @@ import TareaModelo from '../../ModelosBD/modeloMongo.js';
 
 const CrearTareaBD = async (datosTarea) => {
 
-        const tareaExistente = await TareaModelo.findOne({ titulo: datosTarea.titulo });
+        const tareaExistente = await TareaModelo.findOne({ titulo: datosTarea.titulo, idUsuario: datosTarea.idUsuario });
         if (tareaExistente !== null) {
             return {
                 error: true,

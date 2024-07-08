@@ -5,6 +5,7 @@ import cors from 'cors';
 import bodyParser from "body-parser";
 
 import router_todo from '../routes/routers_todo.js';
+import router_usuario from '../routes/routers_usuario.js';
 
 const app = express()
 
@@ -32,5 +33,6 @@ app.use((_req, res, next) => {
 });
 
 app.use('/api', router_todo);
+app.use('/usuario', router_usuario);
 
 export default app;
