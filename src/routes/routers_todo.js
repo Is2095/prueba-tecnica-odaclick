@@ -12,7 +12,7 @@ const router_todo = Router()
 
 router_todo.get('/tareas', BuscarTareas);
 router_todo.post('/tarea', ValidacionTareaActualización, CrearTarea);
-router_todo.post('/editar', ValidacionTarea, EditarTarea);
+router_todo.put('/editar', ValidacionTarea, EditarTarea);
 router_todo.post('/estadoTarea', EstadoTarea);
 router_todo.delete('/borrarTarea', ValidacionBorradoTarea, BorrarTarea);
 

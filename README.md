@@ -54,7 +54,7 @@ Para el Usuario:
 	    "idUsuario": "----" -> id del usuario al que se le va a guardar la tarea
     }
     
-    POST /api/editar
+    PUT /api/editar
     request--> body
     {
 	    "id":  "668c38d5bf9815fdb8efbcb7", --> id de la tarea
